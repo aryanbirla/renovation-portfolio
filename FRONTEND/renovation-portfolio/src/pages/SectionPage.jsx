@@ -51,7 +51,7 @@ function SectionPage() {
 
         {media.map((m, index) => (
 
-          <div key={index} className="col-lg-3 col-md-4 col-sm-6">
+          <div key={index} className="col-lg-3 col-md-6 col-sm-12">
 
             <div className="card shadow">
 

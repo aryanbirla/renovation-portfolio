@@ -5,7 +5,6 @@ function Footer() {
         background:
           "linear-gradient(to right, #212529, #343a40)",
         color: "white",
-        marginTop: "50px",
         padding: "40px 0",
       }}
     >

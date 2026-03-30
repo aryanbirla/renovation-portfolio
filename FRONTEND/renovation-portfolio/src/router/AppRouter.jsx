@@ -16,31 +16,26 @@ import Sections from "../admin/Sections";
 function AppRouter() {
   return (
     <BrowserRouter>
+      <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
 
-      <Navbar />
+        <Navbar />
 
-      <Routes>
+        <main style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/section/:id" element={<SectionPage />} />
+            <Route path="/before-after" element={<BeforeAfter />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/admin" element={<Dashboard />} />
+            <Route path="/upload" element={<UploadMedia />} />
+            <Route path="/manage" element={<ManageMedia />} />
+            <Route path="/sections" element={<Sections />} />
+          </Routes>
+        </main>
 
-        <Route path="/" element={<Home />} />
+        <Footer />
 
-        <Route path="/section/:id" element={<SectionPage />} />
-
-        <Route path="/before-after" element={<BeforeAfter />} />
-
-        <Route path="/login" element={<Login />} />
-
-        <Route path="/admin" element={<Dashboard />} />
-
-        <Route path="/upload" element={<UploadMedia />} />
-
-        <Route path="/manage" element={<ManageMedia />} />
-
-        <Route path="/sections" element={<Sections />} />
-
-      </Routes>
-
-      <Footer />
-
+      </div>
     </BrowserRouter>
   );
 }
